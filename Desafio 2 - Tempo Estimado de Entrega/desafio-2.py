@@ -3,7 +3,7 @@ def exibe_tempo_estimado_entrega(nome_restaurante, tempo_estimado_entrega):
   Exibe o tempo estimado de entrega de um restaurante.
 
   Args:
-    nome_restaurante (str): O nome do restaurante.
+    nome_restaurante (str): O nome do restaurante desejado.
     tempo_estimado_entrega (str): O tempo estimado de entrega em minutos.
 
   Returns:
@@ -19,8 +19,8 @@ def exibe_tempo_estimado_entrega(nome_restaurante, tempo_estimado_entrega):
 
   try:
     tempo_estimado_entrega = int(tempo_estimado_entrega)
-  except ValueError as e:
-    return str(e)
+  except ValueError:
+    return "O tempo estimado de entrega deve ser um número."
 
   # Utilizamos interpolação de strings para formatar a saída.
 
